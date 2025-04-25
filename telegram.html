@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Telegram Клон</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: #e5e5e5;
+    }
+
+    .sidebar {
+      width: 300px;
+      background-color: #ffffff;
+      border-right: 1px solid #ccc;
+      overflow-y: auto;
+    }
+
+    .chat-list {
+      padding: 10px;
+    }
+
+    .chat-item {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    .chat-item:hover {
+      background-color: #f3f3f3;
+    }
+
+    .main-chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #f9f9f9;
+    }
+
+    .chat-header {
+      padding: 15px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      max-width: 70%;
+      padding: 10px;
+      background-color: #dcf8c6;
+      border-radius: 10px;
+    }
+
+    .message.you {
+      background-color: #ffffff;
+      align-self: flex-end;
+    }
+
+    .input-area {
+      display: flex;
+      padding: 10px;
+      background-color: #ffffff;
+      border-top: 1px solid #ccc;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+    }
+
+    .input-area button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #0088cc;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="chat-list">
+      <div class="chat-item">Чат с Алисой</div>
+      <div class="chat-item">Чат с Бобом</div>
+      <div class="chat-item">Общий чат</div>
+    </div>
+  </div>
+
+  <div class="main-chat">
+    <div class="chat-header">Чат с Алисой</div>
+    <div class="messages">
+      <div class="message">Привет, как дела?</div>
+      <div class="message you">Всё отлично, спасибо!</div>
+    </div>
+    <div class="input-area">
+      <input type="text" placeholder="Написать сообщение...">
+      <button>Отправить</button>
+    </div>
+  </div>
+</body>
+</html>
